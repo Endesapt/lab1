@@ -1,3 +1,6 @@
+#Ниже описание для локального запуска с node, typescript и реакт!!! Для проверки есть сайт с готовым сайтом
+[SITE](https://lab1-endesapts-projects.vercel.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
