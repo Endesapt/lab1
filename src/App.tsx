@@ -156,10 +156,9 @@ function App() {
     const [r, g, b] = cmykToRgb(c, m, y, k);
     const [nc,nm,ny,nk]=rgbToCmyk([r,g,b]);
     if(Math.abs(nc-c)>=1 || Math.abs(nm-m)>=1 || Math.abs(ny-y)>=1 && Math.abs(nk-k)>=1){
-      alert("This cmyk is invalid")
-      return;
+      alert("Произойдет потеря при переводе")
     }
-    setCmyk([nc,nm,ny,nk]);
+    setCmyk([c,m,y,k]);
     setRgb([r, g, b]);
     setHex(rgbToHex([r, g, b]));
     setHsl(rgbToHsl([r,g,b]));
