@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { HexColorPicker } from "react-colorful";
 
@@ -152,8 +151,15 @@ function App() {
     y = Math.max(0, Math.min(100, y));
     k = Math.max(0, Math.min(100, k));
 
-    setCmyk([c, m, y, k]);
+    
+
     const [r, g, b] = cmykToRgb(c, m, y, k);
+    const [nc,nm,ny,nk]=rgbToCmyk([r,g,b]);
+    if(Math.abs(nc-c)>=1 || Math.abs(nm-m)>=1 || Math.abs(ny-y)>=1 && Math.abs(nk-k)>=1){
+      alert("This cmyk is invalid")
+      return;
+    }
+    setCmyk([nc,nm,ny,nk]);
     setRgb([r, g, b]);
     setHex(rgbToHex([r, g, b]));
     setHsl(rgbToHsl([r,g,b]));
