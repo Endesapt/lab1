@@ -1,3 +1,4 @@
+#+
 #Ниже описание для локального запуска с node, typescript и реакт!!! Для проверки есть сайт с готовым сайтом
 [SITE](https://lab1-endesapts-projects.vercel.app/)
 
